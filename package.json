@@ -7,7 +7,7 @@
     "dist-js": "browserify -t reactify -t literalify --standalone ReactTextSampleComponent index.js -o dist/react-text-sample-component.js",
     "dist-scss": "node-sass scss/_index.scss dist/react-text-sample-component.css",
     "dist": "npm run dist-js & npm run dist-scss",
-    "test": "browserify -t reactify test/*-test.js | testling"
+    "test": "browserify -t reactify test/*.js | testling"
   },
   "repository": {
     "type": "git",
@@ -40,5 +40,18 @@
   },
   "literalify": {
     "react": "window.React"
+  },
+  "testling": {
+    "files": "test/*.js",
+    "browsers": [
+      "ie/8..latest",
+      "chrome/22..latest",
+      "firefox/16..latest",
+      "safari/latest",
+      "opera/11.0..latest",
+      "iphone/6",
+      "ipad/6",
+      "android-browser/latest"
+    ]
   }
 }
