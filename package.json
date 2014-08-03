@@ -4,10 +4,10 @@
   "description": "Render text as styled boxes",
   "main": "index.js",
   "scripts": {
-    "dist-js": "browserify -t reactify -t literalify --standalone ReactTextSampleComponent index.js -o dist/react-text-sample-component.js",
+    "dist-js": "browserify -g literalify --standalone ReactTextSampleComponent index.js -o dist/react-text-sample-component.js",
     "dist-scss": "node-sass scss/_index.scss dist/react-text-sample-component.css",
     "dist": "npm run dist-js & npm run dist-scss",
-    "test": "browserify -t reactify test/*.js | testling"
+    "test": "testling"
   },
   "repository": {
     "type": "git",
@@ -40,6 +40,9 @@
   },
   "literalify": {
     "react": "window.React"
+  },
+  "browserify": {
+    "transform": ["reactify"]
   },
   "testling": {
     "files": "test/*.js",
