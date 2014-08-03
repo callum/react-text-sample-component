@@ -1,0 +1,44 @@
+{
+  "name": "react-text-sample-component",
+  "version": "0.0.1",
+  "description": "Render text as styled boxes",
+  "main": "index.js",
+  "scripts": {
+    "dist-js": "browserify -t reactify -t literalify --standalone ReactTextSampleComponent index.js -o dist/react-text-sample-component.js",
+    "dist-scss": "node-sass scss/_index.scss dist/react-text-sample-component.css",
+    "dist": "npm run dist-js & npm run dist-scss",
+    "test": "browserify -t reactify test/*-test.js | testling"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/callum/react-text-sample-component"
+  },
+  "keywords": [
+    "react",
+    "text",
+    "component",
+    "blokk"
+  ],
+  "author": "Callum Jefferies <callum@callumj.uk>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/callum/react-text-sample-component/issues"
+  },
+  "homepage": "https://github.com/callum/react-text-sample-component",
+  "dependencies": {
+    "react": "^0.11.1",
+    "truncate": "^1.0.2"
+  },
+  "devDependencies": {
+    "browserify": "^5.9.1",
+    "literalify": "^0.3.0",
+    "reactify": "^0.14.0",
+    "node-sass": "^0.9.3",
+    "tape": "^2.13.4",
+    "testling": "^1.7.0",
+    "es5-shim": "^4.0.1"
+  },
+  "literalify": {
+    "react": "window.React"
+  }
+}

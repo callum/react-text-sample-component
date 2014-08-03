@@ -1,0 +1,11 @@
+.text-sample__word, .text-sample__letter {
+  display: inline-block;
+  vertical-align: middle; }
+
+.text-sample__word {
+  height: 0.8em;
+  margin-right: 0.4em;
+  background-color: currentColor; }
+
+.text-sample__letter {
+  width: 0.6em; }
