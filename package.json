@@ -1,6 +1,6 @@
 {
   "name": "react-text-sample-component",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Render text as styled boxes",
   "main": "index.js",
   "scripts": {
@@ -42,7 +42,9 @@
     "react": "window.React"
   },
   "browserify": {
-    "transform": ["reactify"]
+    "transform": [
+      "reactify"
+    ]
   },
   "testling": {
     "files": "test/*.js",
