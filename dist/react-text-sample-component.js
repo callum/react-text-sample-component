@@ -24,12 +24,12 @@ var TextSample = React.createClass({displayName: 'TextSample',
     }
 
     return this.transferPropsTo(
-      React.DOM.p({className: "text-sample"}, 
+      React.createElement("p", {className: "text-sample"}, 
         text.split(" ").map(function(word, i) {
           return (
-            React.DOM.span({key: i, className: "text-sample__word"}, 
+            React.createElement("span", {key: i, className: "text-sample__word"}, 
               word.split("").map(function(letter, j) {
-                return React.DOM.span({key: j, className: "text-sample__letter"});
+                return React.createElement("span", {key: j, className: "text-sample__letter"});
               })
             )
           );
