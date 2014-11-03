@@ -1,6 +1,6 @@
 {
   "name": "react-text-sample-component",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Render text as styled boxes",
   "main": "index.js",
   "scripts": {
