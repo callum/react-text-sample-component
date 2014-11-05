@@ -1,7 +1,5 @@
 "use strict";
 
-require("es5-shim");
-
 var test = require("tape");
 var ReactTestUtils = require("react/addons").addons.TestUtils;
 var TextSample = require("../");

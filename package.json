@@ -47,6 +47,9 @@
     ]
   },
   "testling": {
+    "scripts": [
+      "./node_modules/es5-shim/es5-shim.js"
+    ],
     "files": "test/*.js",
     "browsers": [
       "ie/8..latest",
